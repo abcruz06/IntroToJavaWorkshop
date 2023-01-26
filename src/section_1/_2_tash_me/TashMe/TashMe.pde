@@ -2,35 +2,35 @@
 //    Drag and drop a picture of a mustache onto sketch.
 
 
-PImage face;
+PImage face; 
 PImage mustache;
-
-
 void setup() {
+   face = loadImage("face4.jpg");
+  mustache = loadImage("mustache.png");
 
 // 2. Change "face.jpg" to the name of the picture you saved.
-face = loadImage("face.jpg");
+face = loadImage("face4.jpg");
 
 // 3. Set the size of the sketch.
-
+size(600,800);
 // 4. Resize the face so it is the same size as the sketch
-
+ face.resize(600,800);
 // 5. Change "mustache.png" to the name of the picture you saved.
 mustache = loadImage("mustache.png");
+//Line above makes a variable for the mustache.png so it can be faster
 
   }
 
 void draw() {
-
-// 6. DRAW FACE.    Use the background() command to make the face the background.
+  background(face);
+// This line will make the image of Ronaldo as the background of the Sketch
 
 
 
 // 7. DRAW MUSTACHE. Use the image() command to draw the mustache.
 //                  The image command looks like this:
-image (mustache, 200,200);
-
-// 8.  MOVE.  Change the DRAW MUSTACHE code to use (mouseX, mouseY) in place of the numbers.
+image (mustache, mouseX, mouseY);
+//The line above will let me control the placement of the mustache through the X and Y placement of my mouse.
 
 
 
@@ -40,5 +40,3 @@ image (mustache, 200,200);
 //               so the mustache center appears where the mouse pointer is
 //     11. Draw a hat when the right mouse button is pressed. USE THIS CODE:
 //               if (mouseButton == RIGHT)  {     }
-
-}
